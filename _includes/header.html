@@ -1,0 +1,38 @@
+{% assign page_url = page.url | remove: 'index.html' %}
+<nav class="site-nav" role="navigation" aria-label="Hoofdnavigatie">
+  <div class="container">
+    <a href="{{ '/' | relative_url }}" class="site-brand" aria-label="{{ site.title }} — home">
+      <img src="{{ '/assets/feather.svg' | relative_url }}" class="nav-feather" alt="" aria-hidden="true">
+      <span class="site-brand__text">
+        <span class="site-brand__title">Veld<em>aantekeningen</em></span>
+        <span class="site-brand__tagline">{{ site.tagline }}</span>
+      </span>
+    </a>
+    <ul class="nav-links" id="nav-links" role="list">
+      {% for item in site.data.navigation %}
+      <li>
+        <a href="{{ item.url | relative_url }}"
+          {% if page_url contains item.url and item.url != "/" %}class="active"{% endif %}>
+          {{ item.title }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    <button class="nav-burger" id="nav-burger" aria-label="Menu openen" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+  <ul role="list">
+    {% for item in site.data.navigation %}
+    <li>
+      <a href="{{ item.url | relative_url }}"
+        {% if page_url contains item.url and item.url != "/" %}class="active"{% endif %}>
+        {{ item.title }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

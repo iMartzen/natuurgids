@@ -1,0 +1,35 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>{{ site.title }}</h4>
+        <p>{{ site.description }}</p>
+      </div>
+      <div>
+        <h4>Navigatie</h4>
+        <ul>
+          {% for item in site.data.navigation %}
+          <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="https://www.ivn.nl/afdeling/son-en-breugel/" target="_blank" rel="noopener">IVN Son en
+              Breugel</a></li>
+          {% if site.waarneming.profile_url and site.waarneming.user_id != "99467" %}
+          <li><a href="{{ site.waarneming.profile_url }}" target="_blank" rel="noopener">Mijn waarnemingen</a></li>
+          {% endif %}
+          <li><a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="{{ '/feed.xml' | relative_url }}">RSS-feed</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">
+      Met ♥︎ gemaakt door <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener"
+        style="color: inherit;">iMartzen</a>
+      &middot; {{ 'now' | date: "%Y" }}
+    </p>
+  </div>
+</footer>

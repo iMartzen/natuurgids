@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    {% include header.html %}
+
+    <section class="hero">
+      <div class="hero-feather-wrap" aria-hidden="true">
+        <img src="{{ '/assets/feather.svg' | relative_url }}" class="hero-feather" alt="">
+      </div>
+      <div class="container">
+        <p class="hero__kicker">Veldaantekeningen · NGO 2026–2028</p>
+        <h1 class="hero__title">
+          Mijn weg naar<br><strong>IVN Natuurgids</strong>
+        </h1>
+        <p class="hero__desc">
+          Persoonlijk dagboek en portfolio van mijn IVN Natuurgidsenopleiding
+          in Het Groene Woud &amp; Van Gogh Nationaal Park — veldaantekeningen,
+          waarnemingen en projecten uit Noord-Brabant.
+        </p>
+        <div class="hero__chips">
+          <span class="hero__chip hero__chip--forest">Het Groene Woud</span>
+          <span class="hero__chip hero__chip--earth">Start 26 sept 2026</span>
+          <span class="hero__chip hero__chip--sky">IVN Son en Breugel</span>
+        </div>
+        <div class="hero__divider"></div>
+      </div>
+    </section>
+
+    <main class="site-main">
+      <div class="container">
+        <div class="main-with-sidebar">
+          <div class="main-content">
+            {{ content }}
+          </div>
+          <aside class="sidebar" aria-label="Zijbalk">
+            {% include sidebar.html %}
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    {% include footer.html %}
+
+    <script src="{{ '/assets/js/nav.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/waarnemingen.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/filters.js' | relative_url }}"></script>
+  </body>
+</html>

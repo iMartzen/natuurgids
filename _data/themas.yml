@@ -1,0 +1,68 @@
+- slug: gidsvaardigheden
+  label: Gidsvaardigheden
+  blok: 1
+  kleur: "#e8d5c0"
+
+- slug: planten
+  label: Planten
+  blok: 2
+  kleur: "#c8dbc0"
+
+- slug: bodem
+  label: Bodem
+  blok: 2
+  kleur: "#d4c8a8"
+
+- slug: vogels
+  label: Vogels
+  blok: 3
+  kleur: "#c0cce0"
+
+- slug: dieren
+  label: Dieren
+  blok: 3
+  kleur: "#c8d8e8"
+
+- slug: insecten
+  label: Insecten
+  blok: 3
+  kleur: "#e0d8b8"
+
+- slug: ecologie
+  label: Ecologie
+  blok: 4
+  kleur: "#c8e0d0"
+
+- slug: landschap
+  label: Landschap
+  blok: 5
+  kleur: "#d4d0c8"
+
+- slug: landschapslijnen
+  label: Landschapslijnen
+  blok: 5
+  kleur: "#d8d0bc"
+
+- slug: wildplukken
+  label: Wildplukken
+  kleur: "#d4e8c8"
+
+- slug: nachtzwaluw
+  label: Nachtzwaluw
+  kleur: "#c8c0d8"
+
+- slug: steenuil
+  label: Steenuil
+  kleur: "#dcc8b8"
+
+- slug: BMP
+  label: BMP
+  kleur: "#c0d4e8"
+
+- slug: kwelwater
+  label: Kwelwater
+  kleur: "#b8d8e8"
+
+- slug: paddenstoelen
+  label: Paddenstoelen
+  kleur: "#e0d0c0"

@@ -1,0 +1,86 @@
+---
+layout: home
+title: Home
+---
+<div class="home">
+
+  <section class="home-section">
+    <h2>Recente activiteiten</h2>
+    <div class="post-grid">
+      {% for post in site.posts limit:4 %}
+      {% assign m = post.date | date: "%-m" | plus: 0 %}
+      {% assign m_idx = m | minus: 1 %}{% assign maand = site.data.maanden[m_idx] %}
+      <article class="post-card"
+        data-type="{{ post.type | default: '' }}"
+        data-themas='{{ post.themas | jsonify | default: "[]" }}'>
+        <div class="post-card__meta">
+          <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
+            {{ post.date | date: "%-d" }} {{ maand }} {{ post.date | date: "%Y" }}
+          </time>
+          {% if post.type %}
+          <span class="post-type post-type--{{ post.type }}">{{ post.type | replace: '-', ' ' }}</span>
+          {% endif %}
+        </div>
+        <h3 class="post-card__title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        {% if post.locatie %}
+        <p class="post-card__location">📍 {{ post.locatie }}</p>
+        {% endif %}
+        {% if post.themas %}
+        <div class="post-card__themas">
+          {% include tag-pills.html themas=post.themas %}
+        </div>
+        {% endif %}
+        {% if post.excerpt %}
+        <p class="post-card__excerpt">{{ post.excerpt | strip_html | truncate: 140 }}</p>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+    {% if site.posts.size > 4 %}
+    <p style="margin-top: 1.5rem; text-align: right;">
+      <a href="{{ '/verslagen/' | relative_url }}">Alle verslagen →</a>
+    </p>
+    {% endif %}
+  </section>
+
+  <section class="home-section">
+    <h2>Projecten</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <div class="project-card__icon">🌙</div>
+        <h3 class="project-card__title">Nachtzwaluw-onderzoek</h3>
+        <p class="project-card__desc">
+          BirdNET audio-detecties van de Nachtzwaluw per nacht, gecorreleerd met weerdata en maanfase.
+        </p>
+        <div class="project-card__themas">
+          <span class="tag-pill" style="--tag-color: #c8c0d8">nachtzwaluw</span>
+          <span class="tag-pill" style="--tag-color: #c0cce0">vogels</span>
+        </div>
+        <div class="project-card__links">
+          <a href="https://imartzeninc.github.io/nightjar/" target="_blank" rel="noopener" class="project-card__link project-card__link--primary">Live app</a>
+          <a href="https://github.com/iMartzenInc/nightjar" target="_blank" rel="noopener" class="project-card__link project-card__link--secondary">GitHub</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-card__icon">🐦</div>
+        <h3 class="project-card__title">Vogel-Spotter</h3>
+        <p class="project-card__desc">
+          Real-time BirdWeather dashboard — recente detecties en top 25 soorten van het afgelopen uur. Voor keukentablet of telefoon.
+        </p>
+        <div class="project-card__themas">
+          <span class="tag-pill" style="--tag-color: #c0cce0">vogels</span>
+          <span class="tag-pill" style="--tag-color: #e8f0c0">BirdWeather</span>
+        </div>
+        <div class="project-card__links">
+          <a href="https://tuin.uitvogelpassie.nl/" target="_blank" rel="noopener" class="project-card__link project-card__link--primary">Live app</a>
+          <a href="https://github.com/imartzen/vogel-spotter" target="_blank" rel="noopener" class="project-card__link project-card__link--secondary">GitHub</a>
+        </div>
+      </div>
+    </div>
+    <p style="text-align: right; margin-top: 0.5rem;">
+      <a href="{{ '/projecten/' | relative_url }}">Alle projecten →</a>
+    </p>
+  </section>
+</div>

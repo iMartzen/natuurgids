@@ -1,0 +1,40 @@
+---
+layout: default
+---
+{% assign m = page.date | date: "%-m" | plus: 0 %}
+{% assign m_idx = m | minus: 1 %}
+{% assign maand = site.data.maanden[m_idx] %}
+
+<article class="post" itemscope itemtype="https://schema.org/BlogPosting">
+  <header class="post-header">
+    <div class="post-meta">
+      <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{ page.date | date: "%-d" }} {{ maand }} {{ page.date | date: "%Y" }}
+      </time>
+      {% if page.type %}
+      <span class="post-type post-type--{{ page.type }}">{{ page.type | replace: '-', ' ' }}</span>
+      {% endif %}
+      {% if page.locatie %}
+      <span class="post-location">📍 {{ page.locatie }}</span>
+      {% endif %}
+    </div>
+
+    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+
+    {% if page.themas %}
+    <div class="post-themas">
+      {% include tag-pills.html themas=page.themas %}
+    </div>
+    {% endif %}
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  {% if page.ivn_link %}
+  <div class="post-source">
+    Bron / meer info: <a href="{{ page.ivn_link }}" target="_blank" rel="noopener">Lees ook op IVN.nl →</a>
+  </div>
+  {% endif %}
+</article>

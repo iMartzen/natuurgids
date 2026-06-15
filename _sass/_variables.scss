@@ -1,0 +1,64 @@
+// === Kleuren ===
+$paper:        #f5f7f2;   // barely-green white — page background
+$paper-mid:    #eaede6;
+$paper-dark:   #cfd5c9;
+$ink:          #191c16;   // cool near-black
+$ink-muted:    #525a4e;
+$ink-faint:    #8c9589;
+
+$forest:       #4a9130;   // vivid grass green — primary accent
+$forest-mid:   #6db250;
+$forest-light: #e6f4de;   // pale green tint
+$forest-pale:  #f1f9ee;
+
+$earth:        #c47a0e;   // warm amber — secondary accent
+$earth-mid:    #dc9e40;
+$earth-light:  #fdf0d5;
+
+$sky:          #ddeef7;   // lichtblauw chip
+$sky-text:     #1a6a96;
+
+$cream-border: #dce4d6;   // green-tinted border
+$white-card:   #ffffff;
+
+// Post-type kleuren
+$type-wandeling:         #3d8a20;
+$type-excursie:          #1a78a0;
+$type-avondles:          #5e2a96;
+$type-biologisch-moment: #b46a10;
+$type-vijf-minuten:      #a03030;
+$type-artikel:           #5a6e3a;
+
+// === Typografie ===
+$font-heading: 'Fraunces', Georgia, 'Times New Roman', serif;
+$font-body:    'DM Sans', system-ui, -apple-system, sans-serif;
+$font-ui:      'DM Sans', system-ui, -apple-system, sans-serif;
+$font-mono:    'Courier New', Courier, monospace;
+
+// === Spacing ===
+$sp-xs:  0.25rem;
+$sp-sm:  0.5rem;
+$sp-md:  1rem;
+$sp-lg:  1.5rem;
+$sp-xl:  2rem;
+$sp-xxl: 3rem;
+
+// === Layout ===
+$max-width:     960px;
+$sidebar-width: 260px;
+$nav-height:    72px;
+
+// === Borders & Radius ===
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 16px;
+$radius-pill: 100px;
+
+// === Transities ===
+$t-fast: 150ms ease;
+$t-mid:  250ms ease;
+
+// === Breakpoints ===
+$bp-sm: 600px;
+$bp-md: 768px;
+$bp-lg: 960px;
