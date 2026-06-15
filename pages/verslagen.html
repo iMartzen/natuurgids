@@ -1,0 +1,59 @@
+---
+layout: page
+title: Verslagen
+permalink: /verslagen/
+subtitle: Wandelingen, excursies en avondlessen
+---
+<div class="filter-bar" id="filter-bar">
+  <span class="filter-label">Type:</span>
+  <button class="filter-btn active" data-filter-type="">Alles</button>
+  <button class="filter-btn" data-filter-type="wandeling">Wandelingen</button>
+  <button class="filter-btn" data-filter-type="excursie">Excursies</button>
+  <button class="filter-btn" data-filter-type="avondles">Avondlessen</button>
+  <button class="filter-btn" data-filter-type="biologisch-moment">Biologisch moment</button>
+  <button class="filter-btn" data-filter-type="artikel">Artikelen</button>
+  <span class="filter-separator">|</span>
+  <span class="filter-label">Thema:</span>
+  {% for thema in site.data.themas %}
+  <button class="filter-btn tag-pill"
+    data-filter-thema="{{ thema.slug }}"
+    style="--tag-color: {{ thema.kleur }}">{{ thema.label }}</button>
+  {% endfor %}
+</div>
+
+<div class="post-grid" id="post-grid">
+  {% for post in site.posts %}
+  {% assign m = post.date | date: "%-m" | plus: 0 %}
+  {% assign m_idx = m | minus: 1 %}{% assign maand = site.data.maanden[m_idx] %}
+  <article class="post-card"
+    data-type="{{ post.type | default: '' }}"
+    data-themas='{{ post.themas | jsonify | default: "[]" }}'>
+    <div class="post-card__meta">
+      <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
+        {{ post.date | date: "%-d" }} {{ maand }} {{ post.date | date: "%Y" }}
+      </time>
+      {% if post.type %}
+      <span class="post-type post-type--{{ post.type }}">{{ post.type | replace: '-', ' ' }}</span>
+      {% endif %}
+    </div>
+    <h3 class="post-card__title">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </h3>
+    {% if post.locatie %}
+    <p class="post-card__location">📍 {{ post.locatie }}</p>
+    {% endif %}
+    {% if post.themas %}
+    <div class="post-card__themas">
+      {% include tag-pills.html themas=post.themas %}
+    </div>
+    {% endif %}
+    {% if post.excerpt %}
+    <p class="post-card__excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+    {% endif %}
+  </article>
+  {% endfor %}
+</div>
+
+<p id="no-results" style="display: none; color: #6b6459; font-style: italic; margin-top: 2rem;">
+  Geen verslagen gevonden voor dit filter.
+</p>

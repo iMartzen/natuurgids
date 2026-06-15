@@ -1,0 +1,40 @@
+<div class="sidebar-section">
+  <h3>Thema's</h3>
+  <div class="tag-cloud">
+    {% for thema in site.data.themas %}
+    <a href="{{ '/verslagen/' | relative_url }}?thema={{ thema.slug }}"
+       class="tag-pill"
+       style="--tag-color: {{ thema.kleur }}">{{ thema.label }}</a>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="sidebar-section">
+  <h3>Recente waarnemingen</h3>
+  {% if site.data.waarnemingen.results %}
+  <ul class="waarnemingen-list">
+    {% for obs in site.data.waarnemingen.results limit:6 %}
+    {% assign obs_m = obs.date | date: "%-m" | plus: 0 %}
+    {% assign obs_m_idx = obs_m | minus: 1 %}
+    {% assign obs_maand = site.data.maanden[obs_m_idx] | truncate: 3, "" %}
+    <li class="waarneming-item">
+      {% if obs.photos[0] %}
+      <img src="{{ obs.photos[0] }}" alt="{{ obs.species_detail.name }}" loading="lazy" width="44" height="44">
+      {% endif %}
+      <div class="waarneming-info">
+        <strong>{{ obs.species_detail.name | default: "Onbekend" }}</strong>
+        <span>{{ obs.date | date: "%-d" }} {{ obs_maand }}</span>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  <a href="{{ site.waarneming.profile_url }}" target="_blank" rel="noopener" class="waarnemingen-link">
+    Alle {{ site.data.waarnemingen.count }} waarnemingen →
+  </a>
+  {% else %}
+  <p class="waarnemingen-fallback">
+    <a href="{{ site.waarneming.profile_url }}" target="_blank" rel="noopener">Bekijk mijn waarnemingen →</a>
+  </p>
+  {% endif %}
+</div>
+

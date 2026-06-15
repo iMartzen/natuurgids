@@ -1,0 +1,59 @@
+title: Veldaantekeningen
+tagline: Mijn weg naar IVN Natuurgids
+description: >-
+  Persoonlijk dagboek, portfolio en referentiemateriaal van mijn
+  IVN Natuurgidsenopleiding Het Groene Woud (2026–2028) in Noord-Brabant.
+
+url: "https://natuurgids.uitvogelpassie.nl"
+baseurl: ""
+
+author:
+  name: iMartzen
+  ivn_afdeling: Son en Breugel
+  github: imartzen
+
+opleiding:
+  naam: IVN Natuurgidsenopleiding Het Groene Woud
+  start: 2026-09-26
+  einde: 2028-04-01
+  locatie: De Kleine Aarde, Boxtel
+
+waarneming:
+  user_id: 99467
+  profile_url: https://waarneming.nl/users/99467/
+
+markdown: kramdown
+highlighter: rouge
+permalink: /verslagen/:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  posts_limit: 20
+
+future: true
+
+sass:
+  silence_deprecations: [import]
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .env
+  - "*.pdf"
+  - docs/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: pages
+    values:
+      layout: page

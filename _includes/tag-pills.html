@@ -1,0 +1,8 @@
+{% for thema_slug in include.themas %}
+  {%- assign thema = site.data.themas | where: "slug", thema_slug | first -%}
+  {%- if thema -%}
+  <span class="tag-pill" style="--tag-color: {{ thema.kleur }}">{{ thema.label }}</span>
+  {%- else -%}
+  <span class="tag-pill">{{ thema_slug }}</span>
+  {%- endif -%}
+{% endfor %}
