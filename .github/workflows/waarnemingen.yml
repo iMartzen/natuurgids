@@ -20,7 +20,7 @@ jobs:
           curl -s \
             -H "Accept: application/json" \
             -H "Accept-Language: nl" \
-            "https://waarneming.nl/api/v1/observations/?user=${{ vars.WAARNEMING_USER_ID }}&page_size=10&format=json" \
+            "https://waarneming.nl/api/v1/observations/?user=99467&page_size=10&format=json" \
             -o _data/waarnemingen.json
 
       - name: Commit als er iets veranderd is
