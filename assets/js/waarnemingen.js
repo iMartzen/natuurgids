@@ -6,7 +6,7 @@
 
   if (!userId) return;
 
-  var API_BASE = 'https://waarneming.nl/api/v1';
+  var API_BASE = 'https://observation.org/api/v1';
   var widgets = document.querySelectorAll('#waarnemingen-widget, #waarnemingen-full');
   if (!widgets.length) return;
 

@@ -20,7 +20,7 @@ opleiding:
 
 waarneming:
   user_id: 99467
-  profile_url: https://waarneming.nl/users/99467/
+  profile_url: https://observation.org/users/99467/observations/
 
 markdown: kramdown
 highlighter: rouge
