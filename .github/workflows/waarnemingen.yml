@@ -21,7 +21,10 @@ jobs:
             -H "Accept: application/json" \
             -H "Accept-Language: nl" \
             "https://observation.org/api/v1/observations/?user=99467&page_size=10&format=json" \
-            -o _data/waarnemingen.json
+            -o "$RUNNER_TEMP/waarnemingen.json"
+          # coördinaten worden niet gebruikt en niet publiek opgeslagen
+          jq -c 'del(.results[].point, .results[].accuracy)' \
+            "$RUNNER_TEMP/waarnemingen.json" > _data/waarnemingen.json
 
       - name: Commit als er iets veranderd is
         run: |
