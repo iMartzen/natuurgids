@@ -138,7 +138,7 @@ Een ecosysteem bestaat uit **biotische en abiotische factoren die samenwerken**.
 - **Korstmos** is mooi omdat je twee vormen van symbiose in één keer laat zien. Het korstmos zelf is mutualisme (alg + schimmel), en het korstmos op de boomschors is commensalisme.
 - **Koekoek** in het voorjaar: een verhaal over broedparasitisme dat iedereen aanspreekt.
 - **Zingende roodborst** in de herfst: hij zingt om zijn territorium af te bakenen, ook het vrouwtje.
-- **Stadsduif** bij een kerktoren: het verschil tussen biotoop en habitat in één beeld.
+- **Stadsduif** bij een kerktoren: de stadsduif stamt af van de rotsduif. De stad is zijn vervangende biotoop (de rotskust) en de nis of richel hoog in de toren is zijn habitat (de rotsspleet).
 - **Moseik**: een exoot, dus geen boom die hier van oorsprong thuishoort. In de eikel met "rastakapsel" vonden we een pissebed: een mini-habitat. Neem een loep mee!
 
 ## Verslag van de avond
