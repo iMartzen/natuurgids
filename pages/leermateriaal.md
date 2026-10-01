@@ -10,13 +10,22 @@ Hier komen theorie-aantekeningen, soortprofielen en referentiemateriaal per blok
 ---
 
 <div class="blok-section" markdown="1" id="blok-1">
-<span class="blok-badge">Blok 1 · Sept–Okt 2026</span>
+<span class="blok-badge">Blok 1 · Sept–Nov 2026</span>
 
-## Kennismaking & Gidsvaardigheden
+## Ecologie & ecosystemen
 
-Basisvaardigheden voor het gidsen: houding, groepsdynamiek, vijf-minutenpraatje, veiligheid in het veld.
+Relaties tussen en binnen soorten, biotische en abiotische factoren, voedselrelaties, kringlopen, successie en biodiversiteit. Boek: deel 4.
 
-*Aantekeningen volgen na start van de lessen.*
+{% assign lessen = site.aantekeningen | where: "blok", 1 | sort: "date" %}
+<ul class="les-lijst">
+  {% for les in lessen %}
+  {% assign m_idx = les.date | date: "%-m" | minus: 1 %}
+  <li>
+    <time datetime="{{ les.date | date_to_xmlschema }}">{{ les.date | date: "%-d" }} {{ site.data.maanden[m_idx] }}</time>
+    <a href="{{ les.url | relative_url }}">{{ les.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
 </div>
 
 <div class="blok-section" markdown="1" id="blok-2">

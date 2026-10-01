@@ -36,6 +36,11 @@ feed:
 
 future: true
 
+collections:
+  aantekeningen:
+    output: true
+    permalink: /leermateriaal/:name/
+
 sass:
   silence_deprecations: [import]
 
@@ -53,6 +58,11 @@ defaults:
       type: posts
     values:
       layout: post
+  - scope:
+      path: ""
+      type: aantekeningen
+    values:
+      layout: page
   - scope:
       path: pages
     values:
