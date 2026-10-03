@@ -199,11 +199,16 @@
   z-index: 99;
   transform: translateY(-8px);
   opacity: 0;
-  transition: transform 220ms ease, opacity 220ms ease;
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform 220ms ease, opacity 220ms ease, visibility 0s linear 220ms;
 
   &.is-open {
     transform: translateY(0);
     opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition-delay: 0s;
   }
 
   ul {
