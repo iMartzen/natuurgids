@@ -22,6 +22,8 @@ Het adoptiegebied is één van de pijlers van de opleiding. Je bezoekt het plek 
 
 De kennis van je adoptiegebied gebruik je in lessen, presentaties en uiteindelijk in je eindpresentatie.
 
+Als meetlat voor het gebied hebben we kennisgemaakt met  [Basiskwaliteit Natuur]({{ '/basiskwaliteit-natuur/' | relative_url }}): een stappenplan voor de nulmeting, een verwachte soortenlijst en vaste meetpunten. Goed om mee te nemen wanneer we hier meer mee aan de slag gaan.
+
 ---
 
 ## Kiezen van een gebied
