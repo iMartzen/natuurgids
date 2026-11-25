@@ -22,13 +22,21 @@ Mijn persoonlijk groeiplan voor de IVN Natuurgidsenopleiding Het Groene Woud. De
   </div>
   <div class="opleiding-info__item">
     <label>Stage</label>
-    <strong>IVN Son en Breugel</strong>
+    <strong>Dispensatie aangevraagd</strong>
   </div>
   <div class="opleiding-info__item">
     <label>Diploma</label>
     <strong>April 2028</strong>
   </div>
 </div>
+
+---
+
+## Stage
+
+De stage hoort bij de opleiding en loopt normaal gesproken bij je eigen IVN-afdeling. Ik heb **dispensatie voor de stage aangevraagd**. Die aanvraag is nu **in behandeling bij de stuurgroep**.
+
+**Status:** *In behandeling (november 2026)*
 
 ---
 
