@@ -35,4 +35,21 @@ Een goed adoptiegebied is:
 - Liefst in of nabij het IVN-werkgebied Son en Breugel
 - Klein genoeg om goed te leren kennen, groot genoeg voor diversiteit
 
-*Keuze volgt bij start van de opleiding.*
+---
+
+## Ons adoptiegebied: het Oud Meer
+
+Met ons groepje hebben we gekozen voor het **Oud Meer**. Op [28 oktober]({% post_url 2026-10-28-les-kringlopen-brandnetel %}) hebben we het in de les gepresenteerd, en we hebben het aangekondigd met een geluidsopname uit het gebied.
+
+**Luister: het Oud Meer, van nachtzwaluw tot vliegtuig**
+
+<audio controls preload="metadata" style="width: 100%; margin: 0.5rem 0 1.5rem;">
+  <source src="{{ '/assets/audio/oudmeer-van-nachtzwaluw-tot-vliegtuig.mp3' | relative_url }}" type="audio/mpeg">
+  Je browser kan dit geluidsfragment niet afspelen. <a href="{{ '/assets/audio/oudmeer-van-nachtzwaluw-tot-vliegtuig.mp3' | relative_url }}">Download de opname (mp3)</a>.
+</audio>
+
+De gebieden van de andere groepjes staan op de [kaart van NGO Het Groene Woud](https://www.natuurgidsenhetgroenewoud.nl/kaart-ngo-het-groene-woud/).
+
+### Volgende stap: de landschapslijn
+
+Met grondboringen en waarnemingen langs een route vertellen we het verhaal van het landschap van het Oud Meer. [Geoefend in Heukelom]({% post_url 2026-11-21-excursie-landschapslijn-heukelom %}). De deadline en posterpresentatie zijn op **16 december 2026**. Uitleg en het observatieformulier staan bij de [aantekeningen over bodem]({{ '/leermateriaal/bodem-les-10/' | relative_url }}#landschapslijn).
