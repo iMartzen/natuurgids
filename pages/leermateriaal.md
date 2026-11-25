@@ -29,13 +29,22 @@ Relaties tussen en binnen soorten, biotische en abiotische factoren, voedselrela
 </div>
 
 <div class="blok-section" markdown="1" id="blok-2">
-<span class="blok-badge">Blok 2</span>
+<span class="blok-badge">Blok 2 · Nov–Dec 2026</span>
 
-## Planten & Bodem
+## Landschap & Bodem
 
-Determineren van wilde planten, bodemtypen, wildplukken, presentatietechnieken.
+Geologie, ijstijden, bodem en bodemtypen, menselijke invloed op het landschap en de landschapslijn in het adoptiegebied. Boek: deel 5.
 
-*Aantekeningen volgen.*
+{% assign lessen = site.aantekeningen | where: "blok", 2 | sort: "date" %}
+<ul class="les-lijst">
+  {% for les in lessen %}
+  {% assign m_idx = les.date | date: "%-m" | minus: 1 %}
+  <li>
+    <time datetime="{{ les.date | date_to_xmlschema }}">{{ les.date | date: "%-d" }} {{ site.data.maanden[m_idx] }}</time>
+    <a href="{{ les.url | relative_url }}">{{ les.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
 </div>
 
 <div class="blok-section" markdown="1" id="blok-3">
