@@ -68,6 +68,27 @@ Naast de opleiding werk ik aan projecten die natuur en technologie samenbrengen,
 </div>
 
 <div class="project-card">
+  <div class="project-card__icon">🗺️</div>
+  <h3 class="project-card__title">Vogelatlas-quiz</h3>
+  <p class="project-card__desc">
+    Kennisquiz over het veldwerk voor de Sovon Vogelatlas 2026-2030: kilometerhokken,
+    telperioden, broedcodes, LiveAtlas en meer. Kies een onderdeel (broed, winter,
+    jaarrond) en krijg na elke vraag uitleg met een verwijzing naar de handleiding.
+    Een korte versie wordt gebruikt op de landelijke Sovon-dag 2026.
+  </p>
+  <div class="project-card__themas">
+    <span class="tag-pill" style="--tag-color: #c0cce0">vogels</span>
+    <span class="tag-pill" style="--tag-color: #d4e8da">educatie</span>
+    <span class="tag-pill" style="--tag-color: #c0d4e8">Vogelatlas</span>
+  </div>
+  <div class="project-card__links">
+    <a href="https://vogelatlas.nl/quiz" target="_blank" rel="noopener" class="project-card__link project-card__link--primary">Quiz</a>
+    <a href="https://vogelatlas.nl/quiz/sovondag2026" target="_blank" rel="noopener" class="project-card__link project-card__link--secondary">Sovon-dag check</a>
+    <a href="{% post_url 2026-11-25-vogelatlas-quiz %}" class="project-card__link project-card__link--secondary">Verslag</a>
+  </div>
+</div>
+
+<div class="project-card">
   <div class="project-card__icon">🦆</div>
   <h3 class="project-card__title">Luistervogel</h3>
   <p class="project-card__desc">
