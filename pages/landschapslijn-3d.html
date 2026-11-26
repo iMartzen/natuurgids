@@ -1,0 +1,42 @@
+---
+layout: volledig
+title: Landschapslijn Oud Meer in 3D
+permalink: /adoptiegebied/landschapslijn/3d/
+excerpt: "De landschapslijn door het Oud Meer in 3D: echt reliëf uit het AHN, met onze boorpunten en gemeten waterstanden."
+# CSP: de hash hoort bij de importmap hieronder. Pas je de importmap aan, dan moet de hash mee.
+csp: "default-src 'self'; script-src 'self' https://cdn.jsdelivr.net 'sha256-9i4nSpia00hLbp1Q3Gw8UaEhAg768cukYc444N+Xc2U='; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'"
+---
+<div class="l3d">
+  <header class="l3d__kop">
+    <a class="l3d__terug" href="{{ '/adoptiegebied/landschapslijn/' | relative_url }}">← Overzicht landschapslijn</a>
+    <h1>Landschapslijn Oud Meer in 3D</h1>
+    <p>Echt reliëf uit het AHN, met onze boorpunten. Draai met één vinger of de muis, zoom met twee vingers of het scrollwiel, en tik op een nummer.</p>
+  </header>
+
+  <section class="l3d__beeld">
+    <div id="l3d-stage" class="l3d__stage" data-terrein="{{ '/assets/data/oud-meer-terrein.json' | relative_url }}">
+      <p id="l3d-fout" class="l3d__fout">Het 3D-beeld kan niet laden. Open de pagina in een recente browser met WebGL, of bekijk het <a href="{{ '/adoptiegebied/landschapslijn/' | relative_url }}">overzicht</a>.</p>
+    </div>
+    <div class="l3d__bediening">
+      <button class="l3d__knop" id="l3d-wandel" aria-pressed="false">Wandel de lijn</button>
+      <button class="l3d__knop" id="l3d-overzicht">Overzicht</button>
+      <button class="l3d__knop" id="l3d-zij">Dwarsprofiel</button>
+      <button class="l3d__knop" id="l3d-regen" aria-pressed="false">Regen</button>
+      <label class="l3d__schuif">Hoogte
+        <input id="l3d-hoogte" type="range" min="1" max="20" step="1" value="8">
+        <output id="l3d-hoogte-uit">8× overdreven</output>
+      </label>
+    </div>
+    <ul class="l3d__legenda">
+      <li><i class="l3d__kleur l3d__kleur--water"></i>Open water. Het peil is geschat uit de oevers; de diepte is niet gemeten.</li>
+      <li><i class="l3d__kleur l3d__kleur--leeg"></i>Doorzichtige grijze kern: nog geen bodemlagen ingevoerd.</li>
+      <li><i class="l3d__kleur l3d__kleur--meetwater"></i>Blauwe ring: gemeten water in het boorgat.</li>
+    </ul>
+  </section>
+
+  <aside id="l3d-kaartje" class="l3d__kaartje" aria-live="polite"></aside>
+</div>
+
+<script type="application/json" id="ll-data">{{ site.data.landschapslijn | jsonify | replace: '<', '\u003c' }}</script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"},"integrity":{"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js":"sha384-61S/Nu32S3E5+n+KpCOTb2eRYps6fVKm+9Gz1QBvSePFthb46f063Aa/qe/lykFZ","https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js":"sha384-qlO/ZugKPxAQUAvTlQoo0QECzxJIJySZmCF/DHdb2Xn/hHndFwX/vfUAC9Hbk6LP"}}</script>
+<script type="module" src="{{ '/assets/js/landschapslijn-3d.js' | relative_url }}" data-overzicht="{{ '/adoptiegebied/landschapslijn/' | relative_url }}" id="l3d-script"></script>

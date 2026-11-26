@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    {% if page.csp %}
+    {% assign csp = page.csp %}
+    {% if jekyll.environment == "development" %}
+    {% comment %}Lokaal (jekyll serve --livereload) ook de livereload-server toestaan.{% endcomment %}
+    {% assign csp = csp | replace: "script-src 'self'", "script-src 'self' http://127.0.0.1:35729 http://localhost:35729" | replace: "connect-src 'self'", "connect-src 'self' ws://127.0.0.1:35729 ws://localhost:35729" %}
+    {% endif %}
+    <meta http-equiv="Content-Security-Policy" content="{{ csp }}">
+    {% endif %}
+    {% include head.html %}
+  </head>
+  <body class="volledig">
+    {% include header.html %}
+
+    <main class="volledig-main">
+      {{ content }}
+    </main>
+
+    <script src="{{ '/assets/js/nav.js' | relative_url }}"></script>
+  </body>
+</html>
