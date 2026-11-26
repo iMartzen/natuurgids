@@ -83,7 +83,7 @@ Naast de opleiding werk ik aan projecten die natuur en technologie samenbrengen,
   </div>
   <div class="project-card__links">
     <a href="https://vogelatlas.nl/quiz" target="_blank" rel="noopener" class="project-card__link project-card__link--primary">Quiz</a>
-    <a href="https://vogelatlas.nl/quiz/sovondag2026" target="_blank" rel="noopener" class="project-card__link project-card__link--secondary">Sovon-dag check</a>
+    <a href="https://vogelatlas.nl/quiz/checj" target="_blank" rel="noopener" class="project-card__link project-card__link--secondary">Snelle check</a>
     <a href="{% post_url 2026-11-25-vogelatlas-quiz %}" class="project-card__link project-card__link--secondary">Verslag</a>
   </div>
 </div>

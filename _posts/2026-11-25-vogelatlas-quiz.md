@@ -21,7 +21,7 @@ De quiz is een hulpmiddel om te oefenen, geen vervanging: de *Handleiding Sovon 
 
 ## Op de goede weg? De check voor de Sovon-dag
 
-Voor de **landelijke Sovon-dag** is er een korte versie: **[Op de goede weg? Vogelatlas-check](https://vogelatlas.nl/quiz/sovondag2026)**. In twee minuten en tien vragen check je of je klaar bent voor het veldwerk, zonder in te loggen en met direct uitleg. Wie daarna meer wil oefenen, gaat door naar de uitgebreide quiz.
+Voor de **landelijke Sovon-dag** is er een korte versie: **[Op de goede weg? Vogelatlas-check](https://vogelatlas.nl/quiz/check)**. In twee minuten en tien vragen check je of je klaar bent voor het veldwerk, zonder in te loggen en met direct uitleg. Wie daarna meer wil oefenen, gaat door naar de uitgebreide quiz.
 
 ## Waarom dit leuk is
 
