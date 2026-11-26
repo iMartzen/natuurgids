@@ -589,3 +589,166 @@ a.tag-pill {
     color: $ink-muted;
   }
 }
+
+// =====================
+// Landschapslijn
+// =====================
+$ll-a1: #3b2a1e; $ll-a2: #bdb8ae; $ll-b: #7a3f1d; $ll-c: #d9b566; $ll-veen: #2a2119; $ll-onbekend: #9a958a;
+$ll-water: #1a6a96;
+
+.ll-actie { margin: $sp-lg 0; }
+.ll-knop {
+  display: inline-block; background: $forest; color: #fff; font-family: $font-ui; font-weight: 700;
+  padding: $sp-sm $sp-lg; border-radius: $radius-pill; text-decoration: none; transition: background $t-fast;
+  &:hover, &:focus-visible { background: #3c7a26; color: #fff; }
+}
+.ll-melding {
+  border: 1px dashed $earth; background: $earth-light; border-radius: $radius-md;
+  padding: $sp-sm $sp-md; font-size: 0.95rem;
+}
+.ll-figuur {
+  margin: $sp-lg 0;
+  figcaption { font-size: 0.85rem; color: $ink-muted; margin-top: $sp-xs; }
+  svg { display: block; width: 100%; height: auto; }
+}
+.ll-kaart {
+  border: 1px solid $cream-border; border-radius: $radius-md; overflow: hidden; background: $paper-mid; min-height: 120px;
+  font-family: $font-ui;
+  .ll-kaart__route { fill: none; stroke: $ink; stroke-width: 3; stroke-dasharray: 10 8; opacity: 0.55; }
+  .ll-kaart__punt circle, .ll-kaart__punt rect { fill: $forest; stroke: #fff; stroke-width: 3; }
+  .ll-kaart__punt.is-wandje rect { fill: $earth; }
+  .ll-kaart__punt text { font-size: 26px; font-weight: 700; text-anchor: middle; fill: $ink; paint-order: stroke; stroke: #fff; stroke-width: 6px; }
+  .ll-kaart__water { font-size: 24px; font-style: italic; fill: #fff; text-anchor: middle; }
+  .ll-kaart__schaal rect { fill: $ink; }
+  .ll-kaart__schaal text, .ll-kaart__noord text { font-size: 20px; font-weight: 700; text-anchor: middle; fill: $ink; paint-order: stroke; stroke: #fff; stroke-width: 5px; }
+  .ll-kaart__noord path { fill: $ink; }
+}
+.ll-profiel {
+  font-family: $font-ui;
+  .ll-profiel__as line { stroke: $cream-border; }
+  .ll-profiel__as text { font-size: 11px; fill: $ink-muted; }
+  .ll-profiel__grond { fill: $earth-light; stroke: $earth; stroke-width: 1.5; }
+  .ll-profiel__water { fill: $sky; }
+  .ll-profiel__waterlabel { font-size: 11px; fill: $ll-water; text-anchor: middle; }
+  .ll-profiel__pijl { stroke: $ll-water; stroke-width: 2; }
+  .ll-profiel__pijlkop { fill: $ll-water; }
+  .ll-profiel__punt circle { fill: $forest; stroke: #fff; stroke-width: 2; }
+  .ll-profiel__punt.is-wandje circle { fill: $earth; }
+  .ll-profiel__punt text { font-size: 12px; font-weight: 700; fill: $ink; }
+}
+
+.ll-punten { display: grid; gap: $sp-md; margin: $sp-lg 0; }
+.ll-punt {
+  border: 1px solid $cream-border; border-radius: $radius-md; background: $white-card; padding: $sp-md;
+  &--wandje { border-color: $earth-mid; }
+}
+.ll-punt__kop {
+  display: flex; gap: $sp-md; align-items: center; margin-bottom: $sp-sm;
+  h3 { margin: 0; font-size: 1.15rem; }
+  p { margin: 0; color: $ink-muted; font-size: 0.9rem; }
+}
+.ll-punt__nr {
+  flex: none; width: 2.2rem; height: 2.2rem; border-radius: 50%; display: grid; place-items: center;
+  background: $forest; color: #fff; font-family: $font-ui; font-weight: 700;
+  .ll-punt--wandje & { background: $earth; border-radius: $radius-sm; }
+}
+.ll-punt__body { display: flex; gap: $sp-lg; align-items: flex-start; }
+.ll-kern {
+  position: relative; flex: none; width: 34px; height: 168px; margin: 0 2.2rem 0 0;
+  background: repeating-linear-gradient(45deg, $paper-mid 0 6px, $paper 6px 12px);
+  border: 1px solid $paper-dark; border-radius: 3px;
+}
+.ll-kern__laag { position: absolute; left: 0; right: 0; }
+.ll-kern__laag--A1 { background: $ll-a1; }
+.ll-kern__laag--A2 { background: $ll-a2; }
+.ll-kern__laag--B { background: $ll-b; }
+.ll-kern__laag--C { background: $ll-c; }
+.ll-kern__laag--veen { background: $ll-veen; }
+.ll-kern__laag--onbekend { background: $ll-onbekend; }
+.ll-kern__leeg {
+  position: absolute; inset: 0; writing-mode: vertical-rl; transform: rotate(180deg);
+  display: grid; place-items: center; font-size: 0.7rem; color: $ink-faint;
+}
+.ll-kern__water {
+  position: absolute; left: -4px; right: -4px; border-top: 3px solid $ll-water;
+  span { position: absolute; left: 100%; top: -0.7rem; margin-left: 6px; white-space: nowrap; font-size: 0.7rem; color: $ll-water; font-weight: 700; }
+}
+.ll-kern__schaal { position: absolute; left: 100%; margin-left: 6px; font-size: 0.65rem; color: $ink-faint; white-space: nowrap; }
+.ll-kern__schaal--0 { top: -0.4rem; }
+.ll-kern__schaal--120 { bottom: -0.4rem; }
+.ll-punt__gegevens {
+  display: grid; grid-template-columns: max-content 1fr; gap: 2px $sp-md; margin: 0; font-size: 0.92rem;
+  dt { font-weight: 700; color: $ink-muted; }
+  dd { margin: 0; }
+  ul { margin: 0; padding-left: 1.1rem; }
+}
+.ll-leeg { color: $ink-faint; font-style: italic; }
+.ll-punt__fotos {
+  display: flex; gap: $sp-sm; overflow-x: auto; margin-top: $sp-md;
+  img { height: 140px; border-radius: $radius-sm; }
+}
+@media (max-width: $bp-sm) {
+  .ll-punt__body { gap: $sp-md; }
+}
+
+// Landschapslijn 3D (layout: volledig)
+.volledig-main { padding: $sp-md 0 $sp-xl; }
+.l3d {
+  max-width: 1280px; margin: 0 auto; padding: 0 $sp-md;
+  display: grid; gap: $sp-md; grid-template-columns: minmax(0, 1fr);
+  @media (min-width: $bp-lg) { grid-template-columns: minmax(0, 1fr) 320px; .l3d__kop { grid-column: 1 / -1; } }
+}
+.l3d > * { min-width: 0; }
+.l3d__kop {
+  h1 { font-family: $font-heading; font-size: clamp(1.6rem, 4vw, 2.4rem); margin: $sp-xs 0; }
+  p { margin: 0; color: $ink-muted; }
+}
+.l3d__terug { font-family: $font-ui; font-size: 0.9rem; color: $forest; text-decoration: none; &:hover { text-decoration: underline; } }
+.l3d__stage {
+  position: relative; height: min(68vh, 640px); min-height: 360px; border-radius: $radius-md; overflow: hidden;
+  border: 1px solid $cream-border; background: linear-gradient($sky, $paper);
+  @media (max-width: $bp-md) { height: max(300px, 80vw); min-height: 0; }
+  canvas { display: block; touch-action: none; position: absolute; inset: 0; }
+}
+.l3d__fout { display: none; position: absolute; inset: 0; place-content: center; padding: $sp-lg; text-align: center; margin: 0; }
+.l3d__pin {
+  position: absolute; transform: translate(-50%, -100%); width: 32px; height: 32px; padding: 0; cursor: pointer;
+  border-radius: 50%; border: 2px solid $forest; background: #fff; color: $ink; font: 700 14px $font-ui;
+  &.is-wandje { border-color: $earth; border-radius: $radius-sm; }
+  &[aria-pressed="true"] { background: $forest; color: #fff; }
+  &.is-wandje[aria-pressed="true"] { background: $earth; }
+}
+.l3d__bediening { display: flex; flex-wrap: wrap; gap: $sp-sm; align-items: center; margin-top: $sp-sm; }
+.l3d__knop {
+  font: 600 0.9rem $font-ui; background: #fff; color: $ink; border: 1px solid $cream-border;
+  border-radius: $radius-pill; padding: 6px 14px; cursor: pointer;
+  &[aria-pressed="true"] { background: $ink; color: #fff; border-color: $ink; }
+  &:focus-visible { outline: 3px solid $forest; outline-offset: 2px; }
+}
+.l3d__schuif {
+  display: flex; align-items: center; gap: $sp-sm; font: 600 0.9rem $font-ui; flex: 1 1 260px;
+  input { flex: 1; accent-color: $forest; min-width: 0; }
+  output { font-weight: 400; color: $ink-muted; min-width: 9ch; }
+}
+.l3d__legenda {
+  list-style: none; padding: 0; margin: $sp-sm 0 0; font-size: 0.82rem; color: $ink-muted; display: grid; gap: 2px;
+  li { display: flex; gap: $sp-sm; align-items: center; }
+}
+.l3d__kleur { flex: none; width: 22px; height: 10px; border-radius: 2px; }
+.l3d__kleur--water { background: #2f78a8; }
+.l3d__kleur--leeg { background: rgba(154, 149, 138, 0.45); border: 1px solid $ink-faint; }
+.l3d__kleur--meetwater { border: 3px solid #1a6a96; border-radius: 50%; width: 14px; height: 14px; }
+.l3d__kaartje {
+  background: $white-card; border: 1px solid $cream-border; border-radius: $radius-md; padding: $sp-md; align-self: start;
+  h2 { font-family: $font-heading; font-size: 1.4rem; margin: 0; }
+  h3 { font-size: 0.95rem; margin: $sp-md 0 $sp-xs; }
+  .ll-punt__gegevens { margin-top: $sp-md; }
+}
+.l3d__meta { color: $ink-muted; font-size: 0.9rem; margin: 2px 0 0; }
+.l3d__lagen {
+  list-style: none; padding: 0; margin: 0; font-size: 0.9rem;
+  li { display: flex; gap: $sp-sm; align-items: center; }
+  i { flex: none; width: 14px; height: 14px; border-radius: 2px; }
+}
+.l3d__nav { display: flex; justify-content: space-between; gap: $sp-sm; margin-top: $sp-md; }
+.l3d__bron { font-size: 0.85rem; margin: $sp-sm 0 0; a { color: $forest; } }

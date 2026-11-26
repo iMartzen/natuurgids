@@ -54,6 +54,8 @@ De gebieden van de andere groepjes staan op de [kaart van NGO Het Groene Woud](h
 
 Het Oud Meer heeft nog heide, terwijl in Noord-Brabant tussen 1900 en 2000 zo'n 95% van de heide verdween. In [de les over het cultuurhistorische landschap]({% post_url 2026-11-25-les-cultuurhistorisch-landschap %}) leerde ik dat heide en landbouw direct met elkaar verbonden waren: de boer had de heide nodig voor plaggen en mest. Hoe is de heide hier bewaard gebleven, en hoe hing die samen met de landbouw eromheen? Te onderzoeken met [Topotijdreis](https://topotijdreis.nl/) en het kadaster van 1832 op [HISGIS](https://www.hisgis.nl).
 
-### Volgende stap: de landschapslijn
+### De landschapslijn
 
-Met grondboringen en waarnemingen langs een route vertellen we het verhaal van het landschap van het Oud Meer. [Geoefend in Heukelom]({% post_url 2026-11-21-excursie-landschapslijn-heukelom %}). De deadline en posterpresentatie zijn op **16 december 2026**. Uitleg en het observatieformulier staan bij de [aantekeningen over bodem]({{ '/leermateriaal/bodem-les-10/' | relative_url }}#landschapslijn).
+Met grondboringen en waarnemingen langs een route vertellen we het verhaal van het landschap van het Oud Meer. Op 25 november hebben we geboord: zeven boringen en een podzolwandje. **[Bekijk de landschapslijn]({{ '/adoptiegebied/landschapslijn/' | relative_url }})**, met kaart, hoogteprofiel en alle punten, of [wandel hem in 3D]({{ '/adoptiegebied/landschapslijn/3d/' | relative_url }}).
+
+[Geoefend in Heukelom]({% post_url 2026-11-21-excursie-landschapslijn-heukelom %}). De posterpresentatie is op **16 december 2026**. Uitleg en het observatieformulier staan bij de [aantekeningen over bodem]({{ '/leermateriaal/bodem-les-10/' | relative_url }}#landschapslijn).
